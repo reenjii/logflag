@@ -33,12 +33,12 @@ import (
 // stringslice stores multi-value command line arguments.
 type stringslice []string
 
-// String makes stringslice implement the flag.Value interface.
+// String makes stringslice implement flag.Value interface.
 func (s *stringslice) String() string {
 	return fmt.Sprintf("%s", *s)
 }
 
-// Set makes stringslice implement the flag.Value interface.
+// Set makes stringslice implement flag.Value interface.
 func (s *stringslice) Set(value string) error {
 	for _, v := range strings.Split(value, ",") {
 		if len(v) > 0 {
