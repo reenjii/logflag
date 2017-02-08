@@ -1,5 +1,7 @@
 # logflag provides a `-log` command line flag to customize default logrus logger
 
+See [logrus](https://github.com/sirupsen/logrus): structured, pluggable logging for Go.
+
 Simply import package and call `logflag.Parse()` after `flag.Parse()`.
 
 This adds a `-log` multivalue flag to your command line with the following possible values:
